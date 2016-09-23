@@ -30,6 +30,7 @@
     }
 ```
 
+So easy!
 
-
-### So easy!
+## License
+template-lite.js is released under the MIT license.
