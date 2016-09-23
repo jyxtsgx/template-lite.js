@@ -1,0 +1,22 @@
+{
+  "name": "template-lite.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gongchao@github.com/gongchao/template-lite.js.git"
+  },
+  "author": "gongchao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gongchao/template-lite.js/issues"
+  },
+  "homepage": "https://github.com/gongchao/template-lite.js#readme",
+  "dependencies": {
+    "babel-preset-es2015": "^6.14.0"
+  }
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="cn-ZH">
+<head>
+    <meta charset="UTF-8">
+    <title>template-lite.js</title>
+    <style>
+        html, body {
+            display: flex;
+            padding-top: 30px;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        code {
+            padding: 5px 10px;
+            color: #fff;
+            background: #333;
+        }
+        
+        a {
+            display: inline-block;
+            padding: 5px 10px;
+            color: #fff;
+            background: RGBA(52, 152, 219, 1.00);
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .fade {
+            animation: fade 1s;
+        }
+
+        @keyframes fade {
+            from {
+                transform: scale(2);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<script id="main" type="text/template">
+    <div class="fade">
+        <h1>${hello}</h1>
+        <p>${description}</p>
+        <p>使用说明:</p>
+        <p>引入 template-lite.js </p>
+        <code>
+            template(string, object);
+        </code>
+        <p>就是这么简单!</p>
+        <p>So easy, 马上开始吧</p>
+        <a href="https://github.com/gongchao/template-lite.js">github</a>
+    </div>
+</script>
+<script src="./dist/template-lite-compiled.js"></script>
+<script type="text/javascript">
+
+    var result = template(
+            document.getElementById('main').innerHTML
+            , {
+                hello: 'template-lite.js',
+                description: '这是一个微型的 javascript 模版引擎, 它仅仅 1kb, 当然也没任何额外的功能, 仅仅作为模版替换, 支持 function 传入。'
+            });
+    document.body.insertAdjacentHTML('afterbegin', result);
+
+</script>
+</body>
+</html>
