@@ -4,6 +4,11 @@
 
 ## 使用方法
 
+### 下载
+```
+npm install template-lite.js --save
+```
+
 ### 引入 template-lite.js
 ```javascript
 <script src="./dist/template-lite-compiled.js"></script>
