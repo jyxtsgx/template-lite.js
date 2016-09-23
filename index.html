@@ -63,13 +63,15 @@
 <script src="./dist/template-lite-compiled.js"></script>
 <script type="text/javascript">
 
-    var result = template(
-            document.getElementById('main').innerHTML
-            , {
-                hello: 'template-lite.js',
-                description: '这是一个微型的 javascript 模版引擎, 它仅仅 1kb, 当然也没任何额外的功能, 仅仅作为模版替换, 支持 function 传入。'
-            });
-    document.body.insertAdjacentHTML('afterbegin', result);
+    window.onload = function () {
+        var result = template(
+                document.getElementById('main').innerHTML
+                , {
+                    hello: 'template-lite.js',
+                    description: '这是一个微型的 javascript 模版引擎, 它仅仅 1kb, 当然也没任何额外的功能, 仅仅作为模版替换, 支持 function 传入。'
+                });
+        document.body.insertAdjacentHTML('afterbegin', result);
+    }
 
 </script>
 </body>
