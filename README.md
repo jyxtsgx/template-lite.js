@@ -10,7 +10,7 @@
 ```
 
 ### 使用
-```
+```javascript
     var result = template(
             document.getElementById('main').innerHTML
             , {
@@ -19,5 +19,17 @@
             });
     document.body.insertAdjacentHTML('afterbegin', result);
 ```
+
+支持 函数 引入
+```javascript
+    {
+        hello: 'hello world',
+        description: function () {
+            return 'template-lite.js'
+        }
+    }
+```
+
+
 
 ### So easy!
