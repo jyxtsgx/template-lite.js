@@ -18,6 +18,29 @@ npm install template-lite.js --save
 ```
 
 ### 使用
+
+#### 标签
+标签使用 ```${variable}```
+
+#### 声明模版
+```html
+<script id="main" type="text/template">
+    <div class="fade">
+        <h1>${hello}</h1>
+        <p>${description}</p>
+        <p>使用说明:</p>
+        <p>引入 template-lite.js </p>
+        <code>
+            template(string, object);
+        </code>
+        <p>就是这么简单!</p>
+        <p>So easy, 马上开始吧</p>
+        <a href="https://github.com/gongchao/template-lite.js">github</a>
+    </div>
+</script>
+```
+
+#### 引入模版
 ```javascript
     var result = template(
             document.getElementById('main').innerHTML
@@ -28,7 +51,7 @@ npm install template-lite.js --save
     document.body.insertAdjacentHTML('afterbegin', result);
 ```
 
-支持 函数 引入
+#### 支持 函数 引入
 ```javascript
     {
         hello: 'hello world',
