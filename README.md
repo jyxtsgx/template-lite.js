@@ -17,7 +17,7 @@ npm install template-lite.js --save
 <script src="./dist/template-lite-compiled.js"></script>
 ```
 
-### 使用
+### 开始使用
 
 #### 标签
 标签使用 ```${variable}```
