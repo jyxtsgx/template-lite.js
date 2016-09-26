@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cn-ZH">
+<head>
+    <meta charset="UTF-8">
+    <title>模块化的例子</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="demo" class="container" style="margin-top: 50px"></div>
+
+
+    <script
+    id="app"
+    type="text/template">
+        <div class="panel panel-default">
+            <div class="panel-heading">内容</div>
+            <div class="panel-body">
+                ${items}
+            </div>
+        </div>
+    </script>
+
+    <script
+    id="item"
+    type="text/template">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h1>${title}</h1></div>
+            <p class="panel-body">${des}</p>
+        </div>
+    </script>
+
+    <script src="../dist/template/dist/template-lite-compiled.min.js" charset="utf-8"></script>
+    <script>
+        window.onload = function() {
+
+            var items = function (data) {
+                var arr = '';
+                for (var i = 0; i < data.length; i++) {
+                    arr += render('item', {title: data[i].title, des: data[i].des})
+                }
+                return arr;
+            }
+
+            var app = render('app', {items: items([
+                {
+                    title: '小明',
+                    des: '我是小明'
+                }, {
+                    title: '小红',
+                    des: '我是小红'
+                }
+            ])})
+
+            document.querySelector('#demo').insertAdjacentHTML('afterbegin', app);
+        }
+
+        function render() {
+            return template(document.getElementById(arguments[0]).innerHTML, arguments[1])
+        }
+    </script>
+</body>
+</html>
