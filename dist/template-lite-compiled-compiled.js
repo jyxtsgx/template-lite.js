@@ -35,6 +35,9 @@ function _classCallCheck(instance, Constructor) {
             value: function change(tpl, hash) {
                 return tpl.replace(/\${.*?}/g, function () {
                     var key = arguments[0].replace('${', '').replace('}', '').trim();
+                    if (key.indexOf('?') > -1) {
+                        return eval(key);
+                    }
                     if (!hash.hasOwnProperty(key)) {
                         console.warn('template prompt: ' + key + ' is not defined');
                     }

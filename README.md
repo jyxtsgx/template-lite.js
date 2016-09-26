@@ -13,7 +13,7 @@ npm install template-lite.js --save
 ```
 
 ### 引入 template-lite.js
-```javascript
+```html
 <script src="./dist/template-lite-compiled.js"></script>
 ```
 
@@ -51,7 +51,10 @@ npm install template-lite.js --save
     document.body.insertAdjacentHTML('afterbegin', result);
 ```
 
-#### 支持 函数 引入
+## 方法支持
+
+### 传入类型
+#### 函数传入
 ```javascript
     {
         hello: 'hello world',
@@ -61,7 +64,11 @@ npm install template-lite.js --save
     }
 ```
 
-So easy!
+### 运算
+#### 三目运算
+```html
+<h1>${true ? 'condition is true' : 'contrary'}</h1>
+```
 
 ## License
 template-lite.js is released under the MIT license.
