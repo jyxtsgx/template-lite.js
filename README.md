@@ -2,6 +2,9 @@
 # template-lite.js
 微型的 javascript 模版引擎, 仅仅 1kb, 有时候我们只需要一个 string 替换, 但是又不想使用那么庞大的 template, 那么它就是你正在寻找的。
 
+## Example
+- [module example](./example/module.html)
+
 ## 使用方法
 
 ### 下载
